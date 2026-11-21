@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05060b">
+<title>Rasool Alzoubi — RASOOL-01</title>
+<meta name="description" content="Rasool Alzoubi — Data Science & AI Engineer building LLM, RAG and Arabic/English document AI systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<script>
+/* =====================================================================
+   ✏️  عدّل معلوماتك هون بس — كل الموقع بينبني من هاد الجزء
+   EDIT YOUR INFO HERE — the whole site is generated from this object.
+   ===================================================================== */
+const DATA = {
+  name: "Rasool Alzoubi",
+  model: "RASOOL-01",                       // اسم الروبوت
+  role: "Data Science & AI Engineer",
+  company: "Mawared.ai",
+  taglines: [
+    "LLM, RAG & backend systems, built to ship.",
+    "Arabic/English document pipelines.",
+    "Local LLMs with Ollama, served with FastAPI."
+  ],
+  bio: "I build production LLM and RAG systems with FastAPI, PostgreSQL and vector databases, read Arabic and English documents with OCR, and run models locally with Ollama. Every change gets measured before it ships.",
+
+  email: "rasoolzoubi2003@gmail.com",
+  phone: "+962 79 188 1784",
+  location: "Amman, Jordan",
+  timezone: "Asia/Amman",
+  tzLabel: "GMT+3",
+  github: "https://github.com/rossizoubi",
+  linkedin: "https://www.linkedin.com/in/rasool-alzoubi-b89a67286",
+  available: "Open to AI engineering roles",
+  footerNote: "Built by hand in HTML, CSS & JS · Hosted on GitHub Pages",
+
+  // تشريح الروبوت: كل جزء = مجموعة مهارات (لا تغير قيم "part")
+  anatomy: [
+    { part: "cortex", name: "Cortex", short: "LLMs · RAG", title: "Language models & retrieval",
+      text: "The reasoning layer. I design retrieval-augmented systems that answer from real sources and cite them, instead of guessing.",
+      items: ["RAG Architecture", "GPT-4o-mini", "Qwen2.5", "Llama", "DeepSeek", "LangChain", "Prompt Engineering (Few-Shot, CoT)", "Structured Output", "Tool Calling"] },
+    { part: "optics", name: "Optics", short: "OCR · Vision", title: "Document vision",
+      text: "Reads what people actually send: scanned Arabic PDFs, DOCX and JSON, turned into clean, searchable text.",
+      items: ["Azure AI Document Intelligence", "Arabic OCR", "Vision Language Models", "PDF / DOCX / JSON ingestion"] },
+    { part: "voice", name: "Voice", short: "Arabic · English", title: "Bilingual by design",
+      text: "Arabic is my native language, so Arabic support is built in from the start, not added at the end.",
+      items: ["Arabic (Native)", "English (B1)", "Multilingual e5 embeddings", "Query translation", "87.5% Hit@3 on Arabic"] },
+    { part: "sensors", name: "Sensors", short: "Evaluation · Tests", title: "Evaluation & testing",
+      text: "Every change is measured: frozen test sets, retrieval metrics and safety cases decide what ships.",
+      items: ["Hit@k", "MRR", "Threshold tuning", "Prompt-injection safety sets", "pytest (192 tests)"] },
+    { part: "memory", name: "Memory core", short: "Vector · SQL", title: "Vector & relational memory",
+      text: "Where knowledge lives: vector indexes for meaning, relational databases for facts.",
+      items: ["Qdrant", "ChromaDB", "PostgreSQL", "MySQL", "SQLite", "Schema design & SQL"] },
+    { part: "spine", name: "Spine", short: "Backend · APIs", title: "Backend that holds it together",
+      text: "Typed, validated APIs that everything else hangs on.",
+      items: ["FastAPI", "Pydantic", "SQLAlchemy", "JWT Auth", "REST APIs", "Jinja2", "Flask"] },
+    { part: "hands", name: "Hands", short: "Deploy · Ship", title: "Deployment",
+      text: "Local-first models and stacks that start with one command.",
+      items: ["Docker & Docker Compose", "Ollama (local LLMs)", "Health checks", "Git & GitHub"] },
+    { part: "legs", name: "Legs", short: "Python · ML", title: "Foundations",
+      text: "What it all stands on: solid Python, SQL and classic machine learning, from a degree in Data Science & AI.",
+      items: ["Python", "SQL", "Scikit-learn", "Pandas", "NumPy", "Supervised Learning", "B.Sc. Data Science & AI"] }
+  ],
+  firmware: ["Problem Solving", "Critical Thinking", "Teamwork", "Communication", "Fast Learner", "Time Management"],
+
+  // الخبرات كـ "إصدارات" — الأحدث أول
+  log: [
+    { version: "v2.0", stage: "deployed", role: "Data Science & AI Engineer", org: "Mawared.ai", start: "09/2026", end: "Present",
+      points: [
+        "AI & Backend Engineering: architected and deployed enterprise AI solutions and backend services using FastAPI, Pydantic schemas and SQLAlchemy ORM models.",
+        "LLM & System Integration: designed end-to-end AI workflows integrating local LLMs, vector search and custom REST APIs for scalable production deployment."
+      ] },
+    { version: "v1.0", stage: "fine-tuning", role: "Applied AI Intern", org: "Mawared.ai", start: "06/2026", end: "09/2026",
+      points: [
+        "Built FastAPI backends (CRUD, Jinja2, JWT auth, Pydantic) on relational databases and SQL (joins, aggregations, subqueries).",
+        "Configured and ran open-weight LLMs (Llama, DeepSeek) locally with the Ollama CLI and integrated their REST endpoints.",
+        "Implemented text embeddings for vector similarity search and explored Vision Language Models for multimodal understanding.",
+        "Applied prompting techniques (few-shot, chain-of-thought, structured output) and managed version control with Git/GitHub."
+      ] },
+    { version: "v0.1", stage: "pretraining", role: "B.Sc. in Data Science and Artificial Intelligence", org: "Yarmouk University", start: "2021", end: "2026", points: [] }
+  ],
+
+  // المشاريع — pipeline = خطوات النظام اللي بتتحرك بالكرت
+  projects: [
+    { name: "ComplianceAI", sub: "Policy drafts checked against Central Bank circulars", badge: "Featured", repo: "complianceai",
+      pipeline: ["Policy draft", "Azure OCR", "Deontic rules", "Qdrant search", "GPT-4o-mini", "Cited verdict"],
+      metrics: ["Clause-level citations", "Arabic OCR"],
+      tags: ["FastAPI", "PostgreSQL", "Qdrant", "Azure AI Document Intelligence", "GPT-4o-mini", "Python"],
+      points: [
+        "Built a real-time compliance checker that verifies policy drafts against Central Bank circulars with clause-level citations.",
+        "Designed a deontic-logic rule schema (obligation / permission / prohibition) that turns regulations into queryable atomic rules.",
+        "Engineered a multi-format ingestion pipeline (PDF / DOCX / JSON) using Azure AI Document Intelligence for Arabic OCR.",
+        "Implemented Qdrant vector retrieval (multilingual-e5-small) with GPT-4o-mini, plus a full drafting and approval workflow."
+      ], link: "" },
+    { name: "Rounds", sub: "Bilingual medical RAG assistant", badge: "", repo: "medical-ai-chatbot",
+      pipeline: ["Question AR/EN", "Translate", "e5 embed", "ChromaDB top-k", "Score gate", "Answer + sources"],
+      metrics: ["Hit@3 97.5%", "MRR 0.92", "16K Q&A pairs"],
+      tags: ["Python", "FastAPI", "ChromaDB", "LangChain", "Ollama (Qwen2.5 3B)", "multilingual-e5-small", "SQLite", "JWT", "Docker Compose"],
+      points: [
+        "Built an English/Arabic medical question-answering system using RAG over 16K NIH Q&A pairs (MedQuAD), returning the exact source passages with every answer.",
+        "Wrote an evaluation framework with frozen test sets (Hit@k, MRR, answer rate, safety cases) and used it to drive every change.",
+        "Redesigned chunking to keep each question with its answer and fit the embedding model's token limit, raising Hit@3 from 29% to 97.5% and MRR from 0.22 to 0.92.",
+        "Replaced an intent classifier with retrieval-score gating tuned on a separate dev set, raising answered medical questions from 5% to 100% while blocking all prompt-injection attempts in the safety set.",
+        "Added Arabic support with multilingual E5 embeddings and query translation (87.5% Hit@3 on Arabic questions).",
+        "Made the stack reproducible with one docker compose command (health checks, automatic model download, CPU-only image cut from 9.6 GB to 3.3 GB)."
+      ], link: "https://github.com/rossizoubi/medical-ai-chatbot" },
+    { name: "ClinicBook", sub: "Doctor appointments with a local AI assistant", badge: "New", repo: "clinic-dashboard",
+      pipeline: ["Patient chat", "Qwen2.5 7B", "Tool call", "Service layer", "Patient confirms", "Booking ref"],
+      metrics: ["192 tests", "Local-first", "Claude API optional"],
+      tags: ["Python", "FastAPI", "SQLAlchemy 2.0", "Pydantic v2", "SQLite", "Jinja2", "Tailwind CSS", "Ollama", "pytest", "Docker Compose"],
+      points: [
+        "Built a patient self-service booking site: choose a doctor, day and time, then get a booking reference and a calendar (.ics) file, with slots generated automatically from each doctor's weekly working hours.",
+        "Added an AI booking assistant on a local LLM (Ollama, Qwen2.5 7B) that searches, books and cancels appointments through tool calling over the same service layer as the booking pages, with the Claude API as an optional provider.",
+        "Enforced booking rules in code: atomic slot updates prevent double booking, nothing is booked or cancelled until the patient confirms, and bookings can only be looked up with the patient's name and phone number.",
+        "Wrote 192 pytest tests using an in-memory database and a scripted fake LLM, and packaged the app, Ollama and the model download with Docker Compose."
+      ], link: "https://github.com/rossizoubi/clinic-dashboard" },
+    { name: "Chronic Diseases AI", sub: "Graduation project · clinical decision support", badge: "Graduation", repo: "chronic-diseases-ai",
+      pipeline: ["Patient data", "NHANES features", "RF + LogReg", "Clinical rules", "Risk + advice"],
+      metrics: ["Diabetes", "Hypertension", "Hyperlipidemia"],
+      tags: ["Python", "Scikit-learn", "Pandas", "NumPy", "NHANES"],
+      points: [
+        "Architected a clinical decision-support system for risk assessment and personalized recommendations across diabetes, hypertension and hyperlipidemia.",
+        "Developed disease-specific ML prediction modules on NHANES data using demographics, lab measurements and comorbidities.",
+        "Combined Random Forest and Logistic Regression models with deterministic clinical rules for transparent risk assessments.",
+        "Built an interactive web interface for patient input, real-time inference and recommendation visualization."
+      ], link: "" }
+  ],
+
+  // قبل/بعد — من مشروع Rounds
+  benchmarks: {
+    source: "Rounds · medical RAG assistant · frozen test sets",
+    rows: [
+      { label: "Hit@3 (retrieval)", before: 29, after: 97.5, max: 100, unit: "%", dec: 1 },
+      { label: "MRR", before: 0.22, after: 0.92, max: 1, unit: "", dec: 2 },
+      { label: "Medical questions answered", before: 5, after: 100, max: 100, unit: "%", dec: 0 },
+      { label: "Docker image (CPU-only)", before: 9.6, after: 3.3, max: 10, unit: " GB", dec: 1, lowerBetter: true }
+    ],
+    kpis: [
+      { value: 87.5, dec: 1, unit: "%", label: "Hit@3 on Arabic questions" },
+      { value: 192, dec: 0, unit: "", label: "tests passing · ClinicBook" },
+      { value: 16, dec: 0, unit: "K", label: "medical Q&A pairs indexed" },
+      { value: 100, dec: 0, unit: "%", label: "prompt injections blocked · safety set" }
+    ]
+  },
+
+  // المحادثة بقسم التواصل (ردود جاهزة — مش ذكاء اصطناعي حقيقي)
+  chat: [
+    { q: "What do you build?", a: "Production LLM and RAG systems: retrieval pipelines that answer from real sources, Arabic/English document processing, and the FastAPI backends around them." },
+    { q: "What's your stack?", a: "Python and FastAPI, PostgreSQL, Qdrant or ChromaDB for vectors, Ollama for local models, GPT-4o-mini when the cloud makes sense, and Docker Compose to ship it." },
+    { q: "Best result so far?", a: "On Rounds, my medical RAG assistant, redesigning the chunking took Hit@3 from 29% to 97.5% and MRR from 0.22 to 0.92, measured on frozen test sets." },
+    { q: "Do you work in Arabic?", a: "Arabic is my native language, and I build for it: Arabic OCR, multilingual embeddings and query translation, with 87.5% Hit@3 on Arabic questions." },
+    { q: "Are you open to work?", a: "Yes. I'm open to AI engineering roles and projects around LLMs, RAG and document AI. Email is the fastest way to reach me." }
+  ]
+};
+/* ===================== نهاية الجزء القابل للتعديل ===================== */
+</script>
+
+<style>
+:root{
+  --bg:#05060b; --bg-2:#0a0c16;
+  --glass:rgba(255,255,255,.035); --glass-2:rgba(255,255,255,.065);
+  --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
+  --ink:#eef0ff; --muted:#a6abc8; --subtle:#6b7094;
+  --v:#8b7cff; --c:#45e3d4; --amber:#ffb547; --p:#ff7ac6;
+  --v-soft:rgba(139,124,255,.16); --c-soft:rgba(69,227,212,.13); --a-soft:rgba(255,181,71,.14);
+  --grad:linear-gradient(100deg,#8b7cff 0%,#5fb2f0 55%,#45e3d4 100%);
+  --font-display:'Space Grotesk','Segoe UI',system-ui,sans-serif;
+  --font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --wrap:72rem; --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--font-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+::selection{background:var(--v);color:#fff}
+:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:calc(var(--wrap) + 3rem);margin:0 auto;padding:0 1.5rem}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mono{font-family:var(--font-mono)}
+.skip{position:absolute;left:1rem;top:-3rem;z-index:100;padding:.5rem .9rem;background:var(--c);color:#04110f;font:500 .85rem var(--font-mono);text-decoration:none;border-radius:6px}
+.skip:focus{top:.6rem}
+
+/* ---------- backdrop ---------- */
+.backdrop{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.backdrop::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.2px);background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 60% 25%,#000 15%,transparent 75%);mask-image:radial-gradient(ellipse 90% 70% at 60% 25%,#000 15%,transparent 75%)}
+.blob{position:absolute;border-radius:50%;filter:blur(100px)}
+.blob.a{width:42rem;height:42rem;left:48%;top:-16rem;background:#4b38ff;opacity:.32;animation:drift 24s ease-in-out infinite alternate}
+.blob.b{width:32rem;height:32rem;left:-12rem;top:45%;background:#0fa597;opacity:.16;animation:drift 30s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(-6rem,6rem) scale(1.15)}}
+.spot{position:absolute;left:0;top:0;width:46rem;height:46rem;margin:-23rem 0 0 -23rem;border-radius:50%;opacity:0;transition:opacity .8s;
+  background:radial-gradient(circle,rgba(139,124,255,.10),rgba(69,227,212,.04) 40%,transparent 65%)}
+.spot.on{opacity:1}
+
+/* ---------- boot ---------- */
+#boot{position:fixed;inset:0;z-index:90;display:grid;place-items:center;background:var(--bg);transition:opacity .6s var(--ease),transform .7s var(--ease);cursor:pointer}
+#boot.done{opacity:0;transform:translateY(-3%);pointer-events:none}
+#boot pre{margin:0;min-width:min(30rem,88vw);font:400 .9rem/1.9 var(--font-mono);color:var(--muted);white-space:pre-wrap}
+#boot pre b{font-weight:500;color:var(--c)}
+#boot .skip-hint{position:absolute;bottom:1.5rem;left:0;right:0;text-align:center;font:400 .72rem var(--font-mono);color:var(--subtle)}
+#boot .bar{display:block;height:2px;margin-top:.8rem;background:var(--grad);transform-origin:left;animation:bootbar 1.5s var(--ease) forwards}
+@keyframes bootbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* ---------- header ---------- */
+.top{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(5,6,11,.65);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+.top-in{position:relative;display:flex;align-items:center;justify-content:space-between;height:3.6rem}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font:600 .95rem var(--font-mono);text-decoration:none}
+.brand .mark{position:relative;width:1.35rem;height:1.35rem;border-radius:6px;background:var(--grad);box-shadow:0 0 18px rgba(139,124,255,.55)}
+.brand .mark::after{content:"";position:absolute;inset:5px;border-radius:2px;background:var(--bg)}
+.brand .dim{color:var(--subtle)}
+.nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:.45rem .8rem;border-radius:999px;font:500 .78rem var(--font-mono);color:var(--muted);text-decoration:none;transition:color .2s,background .2s,box-shadow .2s}
+.nav a .i{color:var(--subtle);margin-right:.35rem;font-size:.68rem}
+.nav a:hover{color:var(--ink);background:var(--glass-2)}
+.nav a[aria-current="true"]{color:var(--ink);background:var(--v-soft);box-shadow:inset 0 0 0 1px rgba(139,124,255,.45)}
+.nav a[aria-current="true"] .i{color:var(--c)}
+.menu-btn{display:none;width:2.3rem;height:2.3rem;align-items:center;justify-content:center;background:var(--glass);border:1px solid var(--line-strong);border-radius:8px;color:var(--ink);cursor:pointer}
+.scroll-prog{position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:var(--grad);transform:scaleX(var(--sp,0));transform-origin:left}
+
+main{position:relative;z-index:1}
+section{position:relative}
+
+/* ---------- shared ---------- */
+.eyebrow{display:inline-flex;align-items:center;flex-wrap:wrap;gap:.55rem;margin:0 0 .9rem;font:500 .74rem var(--font-mono);letter-spacing:.06em;color:var(--subtle)}
+.chip-label{padding:.2rem .55rem;border-radius:6px;background:var(--glass-2);border:1px solid var(--line);color:var(--muted)}
+.acc{color:var(--c)}
+.sec{padding:7rem 0 2rem}
+.sec-head{position:relative;max-width:44rem;margin-bottom:3rem}
+h2{font-family:var(--font-display);font-weight:600;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.02;letter-spacing:-.035em;margin:0 0 .9rem}
+.lede{margin:0;font-size:1.08rem;color:var(--muted)}
+.card{position:relative;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(139,124,255,.13),rgba(69,227,212,.05) 35%,transparent 60%)}
+.card:hover::after{opacity:1}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{padding:.3rem .62rem;border-radius:7px;border:1px solid var(--line-strong);background:rgba(5,6,11,.55);font:400 .76rem var(--font-mono);color:var(--muted);transition:border-color .25s,color .25s,background .25s}
+.chip:hover{border-color:var(--v);color:var(--ink);background:var(--v-soft)}
+.bul{list-style:none;margin:.9rem 0 0;padding:0}
+.bul li{position:relative;padding-left:1.3rem;margin:.45rem 0;color:var(--muted)}
+.bul li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--grad);transform:rotate(45deg)}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.7rem;height:3rem;padding:0 1.35rem;border-radius:10px;border:1px solid transparent;font:500 .88rem var(--font-mono);text-decoration:none;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s,border-color .25s,background .25s}
+.btn svg{transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateY(2px)}
+.btn::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-20deg);transition:left .8s var(--ease);pointer-events:none}
+.btn:hover::after{left:135%}
+.btn-primary{background:var(--grad);color:#06070d;box-shadow:0 8px 30px -8px rgba(139,124,255,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(69,227,212,.6)}
+.btn-ghost{background:var(--glass);border-color:var(--line-strong);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--c);background:var(--c-soft);transform:translateY(-2px)}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* reveal */
+.reveal{opacity:0;translate:0 24px;filter:blur(6px)}
+.reveal.in{opacity:1;translate:0 0;filter:none}
+.js .reveal{transition:opacity .85s var(--ease),translate .9s var(--ease),filter .85s var(--ease),transform .3s ease-out,border-color .3s,box-shadow .3s;
+  transition-delay:calc(var(--i,0) * 90ms),calc(var(--i,0) * 90ms),calc(var(--i,0) * 90ms),0s,0s,0s}
+.tilt{will-change:transform}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;padding:5.5rem 0 3rem}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:2rem;align-items:center}
+.intro{opacity:0}
+.go .intro{animation:fadeUp .9s var(--ease) both;animation-delay:var(--d,0s)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.status{display:inline-flex;align-items:center;gap:.55rem;padding:.35rem .8rem;border:1px solid rgba(69,227,212,.35);border-radius:999px;background:var(--c-soft);font:500 .72rem var(--font-mono);letter-spacing:.06em;color:#c3f7f1}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--c);animation:ping 2.2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(69,227,212,.55)}70%{box-shadow:0 0 0 8px rgba(69,227,212,0)}100%{box-shadow:0 0 0 0 rgba(69,227,212,0)}}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(3rem,7.4vw,5.6rem);line-height:.95;letter-spacing:-.045em;margin:1.2rem 0 0}
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .04em .14em;margin:0 -.04em -.14em}
+.w>span{display:inline-block;transform:translateY(112%)}
+.go .w>span{animation:wordUp 1.15s var(--ease) both;animation-delay:var(--d,0s)}
+@keyframes wordUp{from{transform:translateY(112%) rotate(7deg);opacity:0}to{transform:none;opacity:1}}
+.role{margin:1rem 0 0;font:500 1.05rem var(--font-mono);color:var(--ink)}
+.role span{color:var(--subtle)}
+.prompt{display:flex;align-items:center;gap:.6rem;max-width:fit-content;margin:1.3rem 0 1.5rem;padding:.6rem .9rem;border:1px solid var(--line);border-radius:10px;background:rgba(10,12,22,.7);font:400 clamp(.82rem,2vw,.98rem) var(--font-mono);min-height:2.6rem}
+.prompt .ps{color:var(--c)}
+.cursor{display:inline-block;width:.55em;height:1.1em;margin-left:.1em;vertical-align:-.2em;background:var(--grad);border-radius:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.bio{max-width:34rem;margin:0 0 2rem;font-size:1.06rem;color:var(--muted)}
+
+.hero-robot{position:relative;height:min(82svh,44rem);min-height:30rem}
+.bp{position:absolute;inset:4% 2%;border-radius:18px;border:1px solid rgba(69,227,212,.12);
+  background-image:linear-gradient(rgba(69,227,212,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(69,227,212,.07) 1px,transparent 1px);background-size:32px 32px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,#000 30%,transparent 80%)}
+.hero-robot svg{position:relative;width:100%;height:100%;overflow:visible}
+.scan{position:absolute;left:8%;right:8%;top:0;height:14%;pointer-events:none;opacity:0;
+  background:linear-gradient(180deg,transparent,rgba(69,227,212,.08) 70%,rgba(69,227,212,.5) 98%,transparent);mix-blend-mode:screen;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)}
+.go .scan{animation:scan 5.5s cubic-bezier(.45,0,.55,1) 2.2s infinite}
+@keyframes scan{0%{top:2%;opacity:0}8%{opacity:1}40%{opacity:1}46%{top:84%;opacity:0}100%{top:84%;opacity:0}}
+.hint{position:absolute;left:0;right:0;bottom:-.4rem;margin:0;text-align:center;font:400 .72rem var(--font-mono);color:var(--subtle)}
+.hint b{font-weight:500;color:var(--c)}
+
+/* ---------- robot ---------- */
+.robot .sh{stroke:rgba(150,190,255,.38);stroke-width:1.1;stroke-linejoin:round;transition:stroke .35s}
+.robot .rim{fill:none;stroke:rgba(215,235,255,.55);stroke-width:1.1;stroke-linecap:round}
+.robot .seam{fill:none;stroke:var(--c);stroke-width:1.3;stroke-linecap:round;opacity:.85;transition:stroke .35s}
+.robot circle.seam{fill:var(--c);stroke:none}
+.robot .part.active .seam,.robot .part:hover .seam{stroke:var(--amber)}
+.robot .part.active circle.seam,.robot .part:hover circle.seam{fill:var(--amber)}
+.robot .visor{stroke:rgba(69,227,212,.45)}
+.robot .dt{fill:none;stroke:rgba(150,190,255,.24);stroke-width:.9;stroke-linecap:round}
+.robot .jt{stroke:rgba(150,190,255,.45);stroke-width:1.1}
+.robot .part{cursor:pointer;transition:opacity .45s,filter .45s}
+.robot .part:focus{outline:none}
+.robot .part:hover .sh,.robot .part:focus-visible .sh,.robot .part.active .sh{stroke:var(--amber)}
+.robot .part:hover .dt,.robot .part.active .dt{stroke:rgba(255,181,71,.55)}
+.robot .part:hover .grille line,.robot .part.active .grille line{stroke:var(--amber)}
+.robot .part.active .circ,.robot .part:hover .circ{stroke:var(--amber)}
+.robot .part.active .node,.robot .part:hover .node{fill:var(--amber)}
+.robot .part.active,.robot .part:focus-visible{filter:drop-shadow(0 0 7px rgba(255,181,71,.55))}
+.robot .eye{fill:var(--c)}
+.robot .eyes{transform-box:fill-box;transform-origin:center;transition:transform .09s}
+.robot .eyes.blink{transform:scaleY(.08)}
+.robot .circ{fill:none;stroke:rgba(139,124,255,.85);stroke-width:1.1;stroke-dasharray:3 5;animation:flow 1.4s linear infinite}
+.robot .node{fill:var(--v)}
+@keyframes flow{to{stroke-dashoffset:-16}}
+.robot .ring{fill:none;stroke:var(--c);stroke-width:1.4;stroke-dasharray:7 5;transform-box:fill-box;transform-origin:center;animation:spin 7s linear infinite}
+.robot .ring2{fill:none;stroke:var(--v);stroke-width:1;stroke-dasharray:2 4;transform-box:fill-box;transform-origin:center;animation:spin 11s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.robot .core{transform-box:fill-box;transform-origin:center;animation:corePulse 2.6s ease-in-out infinite}
+@keyframes corePulse{50%{transform:scale(.86);opacity:.8}}
+.robot .vert{fill:rgba(69,227,212,.08);stroke:rgba(150,190,255,.4);stroke-width:1;animation:vert 2.8s ease-in-out infinite;animation-delay:calc(var(--k) * .18s)}
+@keyframes vert{0%,100%{fill:rgba(69,227,212,.06)}20%{fill:rgba(69,227,212,.55)}}
+.robot .grille line{stroke:rgba(69,227,212,.7);stroke-width:1.4;stroke-linecap:round;transform-box:fill-box;transform-origin:center}
+.robot.talking .grille line{animation:talk .32s ease-in-out infinite alternate}
+.robot.talking .grille line:nth-child(2){animation-delay:.1s}.robot.talking .grille line:nth-child(3){animation-delay:.2s}
+@keyframes talk{from{transform:scaleX(.45)}to{transform:scaleX(1.15)}}
+.robot .ant{fill:var(--amber);animation:antBlink 2s steps(1) infinite}
+@keyframes antBlink{50%{opacity:.25}}
+.bot-body{animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{50%{transform:translateY(-5px)}}
+.robot .pc{opacity:0}
+.go .robot .pc{animation:assemble 1.1s var(--ease) both;animation-delay:var(--dl,0s)}
+.robot.static .pc{opacity:1;animation:none}
+@keyframes assemble{from{transform:translate(var(--ax,0),var(--ay,0));opacity:0}to{transform:none;opacity:1}}
+.robot .bpt{font:500 9.5px var(--font-mono);fill:rgba(140,205,255,.55);letter-spacing:.08em}
+.robot .bpl{stroke:rgba(140,205,255,.35);stroke-width:.8}
+/* labels (anatomy) */
+.robot .lbl text{font-family:var(--font-mono);transition:fill .35s}
+.robot .lbl .t1{font-size:13px;font-weight:500;fill:var(--subtle);letter-spacing:.06em}
+.robot .lbl .t2{font-size:10.5px;fill:rgba(107,112,148,.8)}
+.robot .lbl .ul{stroke:var(--line-strong);stroke-width:1}
+.robot .lbl .lead{fill:none;stroke:rgba(255,255,255,.14);stroke-width:1;stroke-dasharray:3 4;transition:stroke .35s}
+.robot .lbl .dot{fill:rgba(255,255,255,.3);transition:fill .35s}
+.robot .lbl{cursor:pointer}
+.robot .lbl.active .t1{fill:var(--amber)}
+.robot .lbl.active .t2{fill:var(--ink)}
+.robot .lbl.active .ul{stroke:var(--amber)}
+.robot .lbl.active .lead{stroke:var(--amber);stroke-dasharray:4 4;animation:flow 1s linear infinite}
+.robot .lbl.active .dot{fill:var(--amber)}
+.anat-svg .part{opacity:.42}
+.anat-svg .part.active{opacity:1}
+.anat-svg .frame{opacity:.55}
+
+.tip{position:fixed;z-index:60;left:0;top:0;pointer-events:none;padding:.5rem .7rem;border:1px solid rgba(255,181,71,.45);border-radius:9px;background:rgba(10,12,22,.92);font:400 .74rem/1.4 var(--font-mono);color:var(--muted);opacity:0;transform:translate(-9999px,0);transition:opacity .2s;max-width:16rem}
+.tip b{display:block;color:var(--amber);font-weight:500}
+.tip.on{opacity:1}
+
+/* ---------- anatomy ---------- */
+.anat-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:2.5rem}
+.anat-stage{position:relative}
+.anat-sticky{position:sticky;top:4.6rem;height:calc(100svh - 5.6rem);display:flex;flex-direction:column}
+.anat-sticky svg{flex:1;width:100%;min-height:0}
+.readout{display:flex;justify-content:space-between;gap:1rem;margin:0;padding:.65rem .9rem;border:1px solid var(--line);border-radius:10px;background:rgba(10,12,22,.75);font:500 .74rem var(--font-mono);color:var(--subtle)}
+.readout b{font-weight:500;color:var(--amber)}
+.readout .ok{color:var(--c)}
+.chapters{display:flex;flex-direction:column;gap:0;padding:12vh 0 18vh}
+.chapter{min-height:72vh;display:flex;align-items:center}
+.ch-card{width:100%;padding:1.8rem 1.8rem 1.9rem;transition:border-color .4s,box-shadow .4s,opacity .4s;opacity:.45}
+.chapter.active .ch-card{opacity:1;border-color:rgba(255,181,71,.4);box-shadow:0 24px 60px -30px rgba(255,181,71,.35)}
+.ch-num{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:.9rem}
+.ch-num span:first-child{font:700 3.4rem/1 var(--font-display);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.22)}
+.chapter.active .ch-num span:first-child{-webkit-text-stroke:1px var(--amber)}
+.ch-num span:last-child{font:500 .74rem var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--subtle)}
+.chapter.active .ch-num span:last-child{color:var(--amber)}
+.ch-card h3{margin:0 0 .5rem;font:600 1.6rem/1.15 var(--font-display);letter-spacing:-.025em}
+.ch-card p{margin:0 0 1.1rem;color:var(--muted)}
+.ch-card .ch-status{margin:1.1rem 0 0;font:400 .74rem var(--font-mono);color:var(--subtle)}
+.ch-status b{font-weight:500;color:var(--c)}
+.firmware{margin-top:1rem;padding:1.4rem 1.6rem}
+.firmware p{margin:0 0 .8rem;font:500 .76rem var(--font-mono);color:var(--subtle)}
+
+/* ---------- log ---------- */
+.log{position:relative;list-style:none;margin:0;padding:0 0 0 2.2rem}
+.log::before{content:"";position:absolute;left:.55rem;top:.6rem;bottom:.6rem;width:2px;border-radius:2px;background:linear-gradient(var(--c),var(--v) 60%,var(--p));transform:scaleY(0);transform-origin:top;transition:transform 1.8s var(--ease)}
+.log.in::before{transform:scaleY(1)}
+.log-item{position:relative;margin-bottom:1.2rem;padding:1.5rem 1.7rem 1.6rem}
+.log-item::before{content:"";position:absolute;left:-2.05rem;top:1.9rem;width:.95rem;height:.95rem;border-radius:50%;background:var(--bg);border:2px solid var(--c);box-shadow:0 0 0 4px var(--c-soft),0 0 16px rgba(69,227,212,.6)}
+.log-item.pre::before{border-color:var(--p);box-shadow:0 0 0 4px rgba(255,122,198,.14),0 0 16px rgba(255,122,198,.5)}
+.log-head{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .8rem;margin-bottom:.6rem}
+.ver{padding:.15rem .55rem;border-radius:6px;background:var(--grad);color:#06070d;font:700 .78rem var(--font-mono)}
+.log-item.pre .ver{background:linear-gradient(100deg,#ff7ac6,#8b7cff)}
+.stage{font:500 .74rem var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+.log-item.pre .stage{color:var(--p)}
+.when{margin-left:auto;font:400 .78rem var(--font-mono);color:var(--subtle)}
+.now{display:inline-flex;align-items:center;gap:.4rem;color:var(--c)}
+.now::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c);animation:ping 2.2s infinite}
+.log-item h3{margin:0;font:600 1.35rem/1.25 var(--font-display);letter-spacing:-.02em}
+.org{margin:.2rem 0 0;font-weight:600;color:var(--muted)}
+
+/* ---------- modules ---------- */
+.mods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}
+.mod{display:flex;flex-direction:column;padding:1.6rem 1.6rem 1.5rem;transition:border-color .3s,box-shadow .3s}
+.mod:hover{border-color:rgba(139,124,255,.45);box-shadow:0 22px 50px -26px rgba(139,124,255,.6)}
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+.mod.featured::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;
+  background:conic-gradient(from var(--ang),transparent 0 60%,var(--v) 76%,var(--c) 90%,transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:angspin 5s linear infinite}
+@keyframes angspin{to{--ang:360deg}}
+.mod-top{display:flex;justify-content:space-between;align-items:center;gap:.8rem;margin-bottom:.7rem;font:400 .72rem var(--font-mono);color:var(--subtle)}
+.mod-top b{font-weight:400;color:var(--c)}
+.badge{display:inline-flex;align-items:center;gap:.35rem;padding:.18rem .6rem;border-radius:999px;border:1px solid rgba(139,124,255,.55);background:var(--v-soft);font:500 .66rem var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.badge i{font-style:normal;color:var(--c)}
+.mod h3{margin:0;font:600 1.55rem/1.1 var(--font-display);letter-spacing:-.025em}
+.mod-sub{margin:.3rem 0 1.1rem;color:var(--muted)}
+.pipe{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem;padding:.8rem;border:1px dashed var(--line-strong);border-radius:12px;background:rgba(5,6,11,.5)}
+.step{padding:.28rem .55rem;border-radius:7px;border:1px solid var(--line-strong);font:400 .72rem var(--font-mono);color:var(--muted);animation:stepGlow var(--dur,3.6s) infinite;animation-delay:calc(var(--k) * .45s)}
+.arrow{font:400 .7rem var(--font-mono);color:var(--subtle)}
+@keyframes stepGlow{0%,22%,100%{border-color:var(--line-strong);color:var(--muted);box-shadow:none;background:transparent}
+  6%,14%{border-color:var(--c);color:var(--ink);background:var(--c-soft);box-shadow:0 0 14px rgba(69,227,212,.35)}}
+.mod-metrics{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 0}
+.metric-chip{padding:.22rem .6rem;border-radius:999px;background:var(--a-soft);border:1px solid rgba(255,181,71,.3);font:500 .72rem var(--font-mono);color:#ffd79a}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;margin:.9rem 0 0;padding:0}
+.tag{padding:.16rem .5rem;border-radius:6px;border:1px solid rgba(69,227,212,.2);background:rgba(69,227,212,.05);font:400 .7rem var(--font-mono);color:#9fe9df}
+details.buildlog{margin-top:1rem;border-top:1px solid var(--line);padding-top:.8rem}
+details.buildlog summary{display:flex;align-items:center;gap:.5rem;list-style:none;cursor:pointer;font:500 .78rem var(--font-mono);color:var(--ink)}
+details.buildlog summary::-webkit-details-marker{display:none}
+details.buildlog summary .pl{display:grid;place-items:center;width:1.2rem;height:1.2rem;border-radius:5px;border:1px solid var(--line-strong);color:var(--c);transition:transform .3s var(--ease)}
+details.buildlog[open] summary .pl{transform:rotate(45deg)}
+details.buildlog[open] .bul{animation:fadeUp .5s var(--ease) both}
+.mod-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:auto;padding-top:1rem}
+.gh{display:inline-flex;align-items:center;gap:.45rem;padding:.38rem .7rem;border:1px solid var(--line-strong);border-radius:8px;font:500 .76rem var(--font-mono);text-decoration:none;transition:border-color .25s,background .25s}
+.gh:hover{border-color:var(--c);background:var(--c-soft)}
+
+/* ---------- benchmarks ---------- */
+.bench{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:1.2rem;align-items:start}
+.bm{padding:1.6rem 1.7rem}
+.bm-src{display:flex;justify-content:space-between;gap:1rem;margin:0 0 1.3rem;font:400 .74rem var(--font-mono);color:var(--subtle)}
+.legend{display:flex;gap:1rem}
+.legend span{display:inline-flex;align-items:center;gap:.4rem}
+.legend i{display:inline-block;width:.8rem;height:.35rem;border-radius:2px;background:rgba(166,171,200,.45)}
+.legend span:last-child i{background:var(--grad)}
+.bm-row{padding:.9rem 0;border-top:1px solid var(--line)}
+.bm-row:first-of-type{border-top:0;padding-top:0}
+.bm-label{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:.55rem}
+.bm-label span{font-weight:500}
+.bm-label small{font:400 .7rem var(--font-mono);color:var(--subtle)}
+.bar{display:grid;grid-template-columns:1fr 4.6rem;align-items:center;gap:.8rem;margin:.3rem 0}
+.track{position:relative;height:9px;border-radius:6px;background:rgba(255,255,255,.05);overflow:hidden}
+.track i{position:absolute;left:0;top:0;bottom:0;width:var(--w);border-radius:6px;transform:scaleX(0);transform-origin:left;transition:transform 1.5s var(--ease)}
+.bar.before .track i{background:rgba(166,171,200,.42)}
+.bar.after .track i{background:var(--grad);box-shadow:0 0 14px rgba(69,227,212,.45);transition-delay:.35s}
+.in .track i{transform:scaleX(1)}
+.bar b{font:500 .82rem var(--font-mono);text-align:right;color:var(--muted)}
+.bar.after b{color:var(--ink)}
+.kpis{display:grid;gap:1rem}
+.kpi{padding:1.15rem 1.3rem;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease) .3s}
+.kpi.in::before{transform:scaleX(1)}
+.kpi .v{display:block;font:600 2.2rem/1.05 var(--font-display);letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.kpi .l{display:block;margin-top:.3rem;font:400 .76rem var(--font-mono);color:var(--muted)}
+
+/* ---------- contact ---------- */
+.contact{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:1.2rem;align-items:start}
+.chat{display:flex;flex-direction:column;overflow:hidden;min-height:30rem}
+.chat-top{display:flex;align-items:center;gap:.8rem;padding:.9rem 1.2rem;border-bottom:1px solid var(--line)}
+.chat-top svg{width:2.4rem;height:2.4rem;flex:none}
+.chat-top b{display:block;font:600 .95rem var(--font-display)}
+.chat-top small{display:block;font:400 .7rem var(--font-mono);color:var(--subtle)}
+.chat-top .live{margin-left:auto;display:inline-flex;align-items:center;gap:.4rem;font:500 .68rem var(--font-mono);color:var(--c)}
+.chat-top .live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c);animation:ping 2.2s infinite}
+.msgs{flex:1;display:flex;flex-direction:column;gap:.7rem;padding:1.2rem;max-height:24rem;overflow-y:auto;scroll-behavior:smooth}
+.msg{max-width:85%;padding:.7rem .95rem;border-radius:14px;font-size:.95rem;animation:fadeUp .45s var(--ease) both}
+.msg.bot{align-self:flex-start;border:1px solid var(--line);background:rgba(255,255,255,.04);border-top-left-radius:4px;color:var(--ink)}
+.msg.me{align-self:flex-end;background:var(--grad);color:#06070d;border-top-right-radius:4px;font-weight:500}
+.msg.typing{display:inline-flex;gap:.3rem}
+.msg.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:dots 1s infinite}
+.msg.typing i:nth-child(2){animation-delay:.15s}.msg.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dots{50%{transform:translateY(-4px);opacity:.4}}
+.suggest{display:flex;flex-wrap:wrap;gap:.45rem;padding:1rem 1.2rem 1.2rem;border-top:1px solid var(--line)}
+.suggest button{padding:.42rem .75rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--glass);color:var(--ink);font:500 .76rem var(--font-mono);cursor:pointer;transition:border-color .25s,background .25s,opacity .25s}
+.suggest button:hover{border-color:var(--c);background:var(--c-soft)}
+.suggest button:disabled{opacity:.35;cursor:default}
+.chat-note{margin:0;padding:0 1.2rem 1rem;font:400 .68rem var(--font-mono);color:var(--subtle)}
+.links{display:grid;gap:.7rem}
+.row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1.2rem;text-decoration:none;transition:border-color .25s,transform .3s var(--ease)}
+a.row:hover{border-color:rgba(69,227,212,.5);transform:translateX(3px)}
+.row small{display:block;font:400 .66rem var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--subtle)}
+.row strong{display:block;margin-top:.12rem;font:500 .92rem var(--font-mono);overflow-wrap:anywhere}
+.row .go{font-family:var(--font-mono);color:var(--subtle)}
+a.row:hover .go{color:var(--c)}
+.row .time{font:400 .76rem var(--font-mono);color:var(--subtle);white-space:nowrap}
+
+footer{position:relative;z-index:1;margin-top:6rem;border-top:1px solid var(--line);background:rgba(5,6,11,.6)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;padding-top:1.4rem;padding-bottom:1.4rem;font:400 .74rem var(--font-mono);color:var(--subtle)}
+.foot-in a{text-decoration:none}
+.foot-in a:hover{color:var(--c)}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .hero{min-height:auto;padding-top:6rem}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-robot{height:34rem;min-height:0;margin-top:1rem}
+  .anat-grid{grid-template-columns:1fr;gap:0}
+  .anat-stage{display:contents}
+  .anat-sticky{top:3.6rem;height:46svh;z-index:3;padding:.6rem 0 1.2rem;background:linear-gradient(var(--bg) 80%,rgba(5,6,11,0))}
+  .chapters{padding:4vh 0 10vh}
+  .chapter{min-height:62svh}
+  .mods,.bench,.contact{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:820px){
+  .menu-btn{display:inline-flex}
+  .nav{display:none;position:absolute;top:calc(100% + .4rem);right:1rem;width:min(15rem,calc(100% - 2rem));padding:.5rem;border:1px solid var(--line-strong);border-radius:12px;background:rgba(10,12,22,.97);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;gap:.15rem}
+  .nav a{border-radius:8px;padding:.65rem .8rem}
+}
+@media (max-width:560px){
+  .sec{padding-top:5rem}
+  .hero-robot{height:28rem}
+  .ch-card,.mod,.bm,.log-item{padding:1.25rem 1.2rem 1.3rem}
+  .ch-num span:first-child{font-size:2.6rem}
+  .kpis{grid-template-columns:1fr 1fr}
+  .kpi .v{font-size:1.8rem}
+  .readout{font-size:.66rem}
+  .when{margin-left:0;width:100%}
+  .log{padding-left:1.8rem}
+  .log-item::before{left:-1.65rem}
+  .msg{max-width:92%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .intro,.robot .pc{opacity:1}
+  .w>span{transform:none}
+  .reveal{opacity:1;translate:none;filter:none}
+  .track i,.log::before,.kpi::before{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#anatomy">Skip to content</a>
+<div class="backdrop" aria-hidden="true"><span class="blob a"></span><span class="blob b"></span><span class="spot" id="spot"></span></div>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" id="brand" href="#top"></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main"><ul></ul></nav>
+  </div>
+  <span class="scroll-prog" id="scroll-prog" aria-hidden="true"></span>
+</header>
+
+<main id="main"></main>
+<footer><div class="wrap foot-in"><span id="copy"></span><span id="foot-note"></span><a href="#top">↑ Back to top</a></div></footer>
+
+<script>
+(() => {
+  "use strict";
+  const D = DATA;
+  document.documentElement.classList.add("js");
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const pad = n => String(n).padStart(2, "0");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const DOWN = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const A = D.anatomy || [];
+  const partInfo = Object.fromEntries(A.map((p, k) => [p.part, { ...p, n: k + 1 }]));
+
+  /* =================================================================
+     The robot (SVG) — one function, used in the hero and the anatomy
+     ================================================================= */
+  const LABELS = {
+    cortex:  { side: "L", ly: 30,  ax: 172, ay: 50 },
+    voice:   { side: "L", ly: 128, ax: 186, ay: 136 },
+    memory:  { side: "L", ly: 252, ax: 176, ay: 262 },
+    legs:    { side: "L", ly: 600, ax: 162, ay: 610 },
+    sensors: { side: "R", ly: 22,  ax: 257, ay: 100 },
+    optics:  { side: "R", ly: 112, ax: 236, ay: 100 },
+    spine:   { side: "R", ly: 330, ax: 210, ay: 336 },
+    hands:   { side: "R", ly: 462, ax: 304, ay: 468 }
+  };
+  function robotSVG(id, opts = {}) {
+    const fp = `url(#${id}-plate)`, fl = `url(#${id}-limb)`, glow = `url(#${id}-glow)`;
+    const P = (part, inner) => {
+      const info = partInfo[part] || { name: part, short: "" };
+      return `<g class="part" data-part="${part}" tabindex="0" role="button" aria-label="${esc(info.name)}: ${esc(info.short)}">${inner}</g>`;
+    };
+    const mirror = s => `<g transform="translate(400 0) scale(-1 1)">${s}</g>`;
+    const armL = `
+      <path class="sh" fill="${fl}" d="M106 226 L96 322 C96 333 116 335 117 324 L131 228 Z"/>
+      <path class="rim" d="M108 236 L100 318"/>
+      <circle class="jt" fill="${fp}" cx="106" cy="332" r="10"/><circle class="seam" cx="106" cy="332" r="3.2" filter="${glow}"/>
+      <path class="sh" fill="${fl}" d="M94 340 L87 430 C87 441 106 443 107 432 L119 342 Z"/>
+      <path class="sh" fill="${fp}" d="M96 346 L118 346 L115 384 L93 380 Z"/>
+      <path class="seam" d="M99 392 L95 424" filter="${glow}"/>
+      <circle class="jt" fill="${fp}" cx="97" cy="440" r="5"/>
+      <path class="sh" fill="${fp}" d="M85 446 C83 462 85 474 93 478 C104 478 108 468 108 448 Z"/>
+      <path class="dt" d="M88 474 L86 492 M93 478 L92 498 M98 478 L98 496 M103 474 L104 490 M108 452 L114 466"/>
+      <path class="sh" fill="${fp}" d="M100 208 C104 190 132 182 150 194 L152 214 C142 228 116 234 102 228 Z"/>
+      <path class="rim" d="M106 206 C112 194 130 190 144 196"/>
+      <path class="seam" d="M108 222 L142 214" filter="${glow}"/>`;
+    const legL = `
+      <path class="sh" fill="${fl}" d="M166 440 L160 548 C160 559 182 561 183 550 L193 442 Z"/>
+      <path class="rim" d="M168 452 L163 540"/>
+      <path class="sh" fill="${fp}" d="M163 456 L190 456 L187 506 L162 500 Z"/>
+      <circle class="jt" fill="${fp}" cx="171" cy="562" r="9"/>
+      <path class="sh" fill="${fp}" d="M158 550 L185 550 L182 574 L161 574 Z"/>
+      <path class="seam" d="M164 557 L179 557" filter="${glow}"/>
+      <path class="sh" fill="${fl}" d="M160 576 L157 660 C157 669 177 671 178 663 L185 578 Z"/>
+      <path class="seam" d="M167 592 L164 648" filter="${glow}"/>
+      <circle class="jt" fill="${fp}" cx="168" cy="668" r="5"/>
+      <path class="sh" fill="${fp}" d="M146 672 L186 672 C195 672 197 685 188 689 L146 689 C137 689 137 672 146 672 Z"/>
+      <path class="rim" d="M148 675 L184 675"/>`;
+    const spine = Array.from({ length: 6 }, (_, k) => {
+      const y = 300 + k * 13;
+      return `<rect class="vert" style="--k:${k}" x="191" y="${y}" width="18" height="8" rx="2.5"/><path class="dt" d="M168 ${y + 4} L185 ${y + 4} M215 ${y + 4} L232 ${y + 4}"/>`;
+    }).join("");
+    const pc = (inner, ax, ay, dl) => `<g class="pc" style="--ax:${ax}px;--ay:${ay}px;--dl:${dl}s">${inner}</g>`;
+
+    const legs = pc(P("legs", legL + mirror(legL)), 0, 90, .15);
+    const pelvis = pc(`<g class="frame">
+        <path class="sh" fill="${fp}" d="M168 380 L232 380 L252 398 L246 428 L212 438 L188 438 L154 428 L148 398 Z"/>
+        <path class="dt" d="M160 400 L240 400 M200 400 L200 436"/><path class="rim" d="M172 383 L228 383"/>
+        <circle class="jt" fill="${fp}" cx="178" cy="440" r="9"/><circle class="jt" fill="${fp}" cx="222" cy="440" r="9"/></g>`, 0, 70, .3);
+    const torso = pc(`
+      <g class="frame">
+        <path class="sh" fill="${fp}" d="M118 200 C140 186 260 186 282 200 C292 206 294 218 290 232 L276 300 C270 322 252 336 236 342 L228 380 L172 380 L164 342 C148 336 130 322 124 300 L110 232 C106 218 108 206 118 200 Z"/>
+        <path class="rim" d="M124 204 C146 192 180 190 200 190"/>
+        <path class="dt" d="M200 196 L200 236 M132 222 C160 212 184 220 194 240 M268 222 C240 212 216 220 206 240 M136 294 C162 316 238 316 264 294 M150 200 L186 194 M250 200 L214 194"/>
+        <path class="seam" d="M132 252 L150 286 M268 252 L250 286" filter="${glow}"/>
+        <path d="M132 214 C150 204 176 204 188 214 L176 232 C162 226 146 226 134 232 Z" fill="rgba(255,255,255,.045)"/>
+      </g>
+      ${P("memory", `<circle class="sh" fill="#070a16" cx="200" cy="262" r="24"/><circle class="ring" cx="200" cy="262" r="18"/><circle class="ring2" cx="200" cy="262" r="30"/><circle class="core" cx="200" cy="262" r="11" fill="url(#${id}-core)" filter="${glow}"/>`)}
+      ${P("spine", spine)}`, 0, 45, .45);
+    const arms = pc(P("hands", armL + mirror(armL)), 0, -30, .6);
+    const neck = pc(`<g class="frame">
+        <rect class="sh" fill="${fl}" x="186" y="156" width="28" height="34" rx="5"/>
+        <path class="dt" d="M190 164 L210 164 M190 171 L210 171 M190 178 L210 178"/>
+        <path class="sh" fill="none" d="M182 160 C176 172 170 182 160 192 M218 160 C224 172 230 182 240 192"/></g>`, 0, -40, .7);
+    const head = pc(`<g class="head-track">
+        <g class="frame">
+          <path class="sh" fill="${fp}" d="M200 28 C232 28 252 50 254 82 L256 112 C256 132 246 148 230 156 L214 162 L186 162 L170 156 C154 148 144 132 144 112 L146 82 C148 50 168 28 200 28 Z"/>
+          <path class="rim" d="M160 52 C170 38 184 32 200 31"/>
+          <path class="dt" d="M150 80 C166 72 234 72 250 80 M170 150 L186 160 M230 150 L214 160"/>
+        </g>
+        ${P("cortex", `<path class="circ" d="M200 34 L200 70 M178 40 C171 54 168 64 170 78 M222 40 C229 54 232 64 230 78 M178 58 L200 52 L222 58"/>
+          ${[[200,34],[200,70],[178,40],[170,78],[222,40],[230,78],[178,58],[222,58],[200,52]].map(([x, y]) => `<circle class="node" cx="${x}" cy="${y}" r="2.1"/>`).join("")}`)}
+        ${P("optics", `<path class="sh visor" fill="#02040a" d="M154 86 L246 86 L241 110 C232 119 168 119 159 110 Z"/>
+          <path d="M160 90 L238 90" stroke="rgba(255,255,255,.18)" stroke-width="1.2" stroke-linecap="round"/>
+          <g class="eyes"><g class="pupils">
+            <rect class="eye" x="186" y="98" width="28" height="4.5" rx="2.2" filter="${glow}"/>
+            <circle cx="200" cy="100.2" r="1.6" fill="#ffffff"/>
+          </g></g>`)}
+        ${P("voice", `<path class="sh" fill="${fp}" d="M182 124 L218 124 L213 148 L187 148 Z"/>
+          <g class="grille"><line x1="190" y1="131" x2="210" y2="131"/><line x1="188" y1="136" x2="212" y2="136"/><line x1="190" y1="141" x2="210" y2="141"/></g>`)}
+        ${P("sensors", `<path class="sh" fill="${fl}" d="M141 88 L147 84 L147 126 L141 122 Z"/><path class="sh" fill="${fl}" d="M259 88 L253 84 L253 126 L259 122 Z"/>
+          <path class="seam" d="M144 94 L144 116 M256 94 L256 116" filter="${glow}"/>
+          <circle class="ant" cx="257" cy="100" r="2.6" filter="${glow}"/>`)}
+      </g>`, 0, -90, .85);
+
+    let labels = "";
+    if (opts.labels) {
+      labels = `<g class="labels">${Object.entries(LABELS).map(([part, L]) => {
+        const info = partInfo[part]; if (!info) return "";
+        const left = L.side === "L", lx = left ? -140 : 420, ulx2 = lx + 130, uy = L.ly + 8;
+        const end = left ? ulx2 : lx;
+        const elbowX = left ? Math.min(L.ax - 18, end + 30) : Math.max(L.ax + 18, end - 30);
+        return `<g class="lbl" data-part="${part}">
+          <path class="lead" d="M${end} ${uy} L${elbowX} ${uy} L${L.ax} ${L.ay}"/><circle class="dot" cx="${L.ax}" cy="${L.ay}" r="3"/>
+          <line class="ul" x1="${lx}" y1="${uy}" x2="${ulx2}" y2="${uy}"/>
+          <text class="t1" x="${lx}" y="${L.ly}">${pad(info.n)} · ${esc(info.name.toUpperCase())}</text>
+          <text class="t2" x="${lx}" y="${L.ly + 24}">${esc(info.short)}</text></g>`;
+      }).join("")}</g>`;
+    }
+    let bp = "";
+    if (opts.blueprint) {
+      bp = `<g class="bpg" aria-hidden="true">
+        <text class="bpt" x="-30" y="0">MODEL ${esc(D.model)}</text>
+        <text class="bpt" x="-30" y="14">REV ${new Date().getFullYear()}.${pad(new Date().getMonth() + 1)}</text>
+        <line class="bpl" x1="340" y1="28" x2="340" y2="690"/><line class="bpl" x1="332" y1="28" x2="348" y2="28"/><line class="bpl" x1="332" y1="690" x2="348" y2="690"/>
+        <text class="bpt" transform="translate(356 360) rotate(90)" text-anchor="middle">H 1.80 M · 8 MODULES ONLINE</text>
+        <line class="bpl" x1="60" y1="710" x2="340" y2="710"/><text class="bpt" x="200" y="726" text-anchor="middle">SCALE 1:6 · ALL SYSTEMS NOMINAL</text>
+      </g>`;
+    }
+    const vb = opts.labels ? "-150 -12 710 720" : "-40 -16 440 752";
+    return `<svg class="robot ${opts.cls || ""}" id="${id}" viewBox="${vb}" role="img" aria-label="${esc(D.model)}, a humanoid robot whose parts map to skills">
+      <defs>
+        <linearGradient id="${id}-plate" x1="0" y1="0" x2=".35" y2="1"><stop offset="0" stop-color="#2c3557"/><stop offset=".45" stop-color="#161c33"/><stop offset="1" stop-color="#0a0d1b"/></linearGradient>
+        <linearGradient id="${id}-limb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a0d1b"/><stop offset=".38" stop-color="#2e3860"/><stop offset=".55" stop-color="#1c2340"/><stop offset="1" stop-color="#090c18"/></linearGradient>
+        <radialGradient id="${id}-core"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#45e3d4"/><stop offset="1" stop-color="#8b7cff"/></radialGradient>
+        <radialGradient id="${id}-floor"><stop offset="0" stop-color="rgba(69,227,212,.35)"/><stop offset="1" stop-color="rgba(69,227,212,0)"/></radialGradient>
+        <filter id="${id}-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      ${bp}${labels}
+      <ellipse cx="200" cy="692" rx="92" ry="8" fill="url(#${id}-floor)"/>
+      <g class="bot-body">${legs}${pelvis}${torso}${arms}${neck}${head}</g>
+    </svg>`;
+  }
+
+  /* =================================================================
+     Sections
+     ================================================================= */
+  const NAV = [
+    { id: "anatomy", label: "Anatomy" }, { id: "log", label: "Log" }, { id: "modules", label: "Modules" },
+    { id: "benchmarks", label: "Benchmarks" }, { id: "contact", label: "Contact" }
+  ];
+  const nameParts = D.name.trim().split(/\s+/);
+  const nameHTML = nameParts.map((w, k) => `<span class="w"><span class="${k === nameParts.length - 1 ? "grad-text" : ""}" style="--d:${(.15 + k * .12).toFixed(2)}s">${esc(w)}</span></span>`).join(" ");
+  const head = (n, label, title, lede) => `<header class="sec-head reveal">
+      <p class="eyebrow"><span class="chip-label"><span class="acc">${pad(n)}</span> · ${esc(label)}</span></p>
+      <h2 class="scr">${esc(title)}</h2><p class="lede">${esc(lede)}</p></header>`;
+  const when = (s, e) => `${esc(s)} — ${/^present$/i.test(e || "") ? `<span class="now">${esc(e)}</span>` : esc(e)}`;
+  const bullets = pts => pts && pts.length ? `<ul class="bul">${pts.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : "";
+
+  const heroHTML = `
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="status intro" style="--d:.05s">${esc(D.model)} · ONLINE · ${esc(D.available)}</span>
+        <h1>${nameHTML}</h1>
+        <p class="role intro" style="--d:.45s">${esc(D.role)} <span>@</span> ${esc(D.company)}</p>
+        <p class="prompt intro" style="--d:.55s"><span class="ps" aria-hidden="true">&gt;_</span><span class="sr">${esc((D.taglines || []).join(" "))}</span><span aria-hidden="true"><span id="typed"></span><span class="cursor"></span></span></p>
+        <p class="bio intro" style="--d:.65s">${esc(D.bio)}</p>
+        <div class="actions intro" style="--d:.75s">
+          <a class="btn btn-primary" href="#anatomy">Run diagnostic ${DOWN}</a>
+          <a class="btn btn-ghost" href="mailto:${esc(D.email)}">Email me</a>
+        </div>
+      </div>
+      <div class="hero-robot">
+        <div class="bp" aria-hidden="true"></div>
+        ${robotSVG("bot-hero", { blueprint: true })}
+        <div class="scan" aria-hidden="true"></div>
+        <p class="hint intro" style="--d:1.6s">${fine ? "it follows your cursor · " : ""}<b>tap a part</b> to see what it does</p>
+      </div>
+    </div>
+  </section>`;
+
+  const anatomyHTML = `
+  <section class="sec" id="anatomy">
+    <div class="wrap">
+      ${head(1, "anatomy", `Anatomy of ${D.model}`, `Every part of this robot maps to something I build with. Scroll to run a diagnostic, part by part, or tap any part of the robot.`)}
+      <div class="anat-grid">
+        <div class="anat-stage"><div class="anat-sticky">
+          ${robotSVG("bot-anat", { labels: true, cls: "anat-svg static" })}
+          <p class="readout"><span>DIAGNOSTIC <b id="ro-n">01/${pad(A.length)}</b></span><span id="ro-name">${esc((A[0] || {}).name || "").toUpperCase()}</span><span class="ok">● OK</span></p>
+        </div></div>
+        <div class="chapters">
+          ${A.map((p, k) => `
+          <article class="chapter" id="ch-${p.part}" data-part="${p.part}">
+            <div class="card ch-card">
+              <div class="ch-num"><span>${pad(k + 1)}</span><span>${esc(p.name)} · ${esc(p.short)}</span></div>
+              <h3>${esc(p.title)}</h3>
+              <p>${esc(p.text)}</p>
+              <div class="chips">${p.items.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>
+              <p class="ch-status">status: <b>online</b> · ${pad(p.items.length)} modules loaded</p>
+            </div>
+          </article>`).join("")}
+          ${D.firmware && D.firmware.length ? `<div class="card firmware reveal"><p>firmware.soft_skills</p><div class="chips">${D.firmware.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>` : ""}
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+  const logHTML = `
+  <section class="sec" id="log">
+    <div class="wrap">
+      ${head(2, "changelog", "Version history", "How the model got trained: from pretraining at university to running in production.")}
+      <ol class="log reveal">
+        ${(D.log || []).map((x, k) => `
+        <li class="card log-item reveal${x.stage === "pretraining" ? " pre" : ""}" style="--i:${k}">
+          <div class="log-head"><span class="ver">${esc(x.version)}</span><span class="stage">${esc(x.stage)}</span><span class="when">${when(x.start, x.end)}</span></div>
+          <h3>${esc(x.role)}</h3><p class="org">${esc(x.org)}</p>
+          ${bullets(x.points)}
+        </li>`).join("")}
+      </ol>
+    </div>
+  </section>`;
+
+  const projects = D.projects || [];
+  const modsHTML = `
+  <section class="sec" id="modules">
+    <div class="wrap">
+      ${head(3, "modules", "Deployed modules", "Systems I designed and built end to end. Each card shows the pipeline the data flows through.")}
+      <div class="mods">
+        ${projects.map((p, k) => `
+        <article class="card mod tilt reveal${/^(featured|new)$/i.test(p.badge || "") ? " featured" : ""}" style="--i:${k % 2}">
+          <div class="mod-top"><span>MODULE ${pad(k + 1)} · <b>${esc(p.repo || "")}</b></span>${p.badge ? `<span class="badge"><i>★</i>${esc(p.badge)}</span>` : ""}</div>
+          <h3>${esc(p.name)}</h3><p class="mod-sub">${esc(p.sub || "")}</p>
+          <div class="pipe" aria-label="Pipeline: ${esc((p.pipeline || []).join(", "))}" style="--dur:${((p.pipeline || []).length * .45 + 1).toFixed(2)}s">
+            ${(p.pipeline || []).map((s, i) => `${i ? '<span class="arrow" aria-hidden="true">→</span>' : ""}<span class="step" style="--k:${i}">${esc(s)}</span>`).join("")}
+          </div>
+          ${p.metrics && p.metrics.length ? `<div class="mod-metrics">${p.metrics.map(m => `<span class="metric-chip">${esc(m)}</span>`).join("")}</div>` : ""}
+          <ul class="tags" aria-label="Tech used">${(p.tags || []).map(t => `<li class="tag">${esc(t)}</li>`).join("")}</ul>
+          <details class="buildlog"><summary><span class="pl" aria-hidden="true">+</span>Build log · ${pad((p.points || []).length)} entries</summary>${bullets(p.points)}</details>
+          <div class="mod-foot">${p.link ? `<a class="gh" href="${esc(p.link)}" target="_blank" rel="noopener">View on GitHub ↗</a>` : `<span class="mod-top" style="margin:0">private repository</span>`}</div>
+        </article>`).join("")}
+      </div>
+    </div>
+  </section>`;
+
+  const B = D.benchmarks || { rows: [], kpis: [] };
+  const fmt = (v, dec) => Number(v).toFixed(dec || 0);
+  const benchHTML = `
+  <section class="sec" id="benchmarks">
+    <div class="wrap">
+      ${head(4, "benchmarks", "Before → after", "Real numbers from my own evaluation runs. Every bar is a change I measured, not a guess.")}
+      <div class="bench">
+        <div class="card bm reveal">
+          <p class="bm-src"><span>${esc(B.source || "")}</span><span class="legend"><span><i></i>before</span><span><i></i>after</span></span></p>
+          ${B.rows.map(r => `
+          <div class="bm-row">
+            <div class="bm-label"><span>${esc(r.label)}</span><small>${r.lowerBetter ? "lower is better" : "higher is better"}</small></div>
+            <div class="bar before"><span class="track"><i style="--w:${(r.before / r.max * 100).toFixed(1)}%"></i></span><b>${fmt(r.before, r.dec)}${esc(r.unit)}</b></div>
+            <div class="bar after"><span class="track"><i style="--w:${(r.after / r.max * 100).toFixed(1)}%"></i></span><b><span class="count" data-to="${r.after}" data-dec="${r.dec || 0}">${fmt(r.after, r.dec)}</span>${esc(r.unit)}</b></div>
+          </div>`).join("")}
+        </div>
+        <div class="kpis">
+          ${B.kpis.map((m, k) => `<div class="card kpi tilt reveal" style="--i:${k}"><span class="v grad-text"><span class="count" data-to="${m.value}" data-dec="${m.dec || 0}">${fmt(m.value, m.dec)}</span>${esc(m.unit || "")}</span><span class="l">${esc(m.label)}</span></div>`).join("")}
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+  const rows = [];
+  if (D.email) rows.push({ label: "Email", value: D.email, href: "mailto:" + D.email });
+  if (D.phone) rows.push({ label: "Phone", value: D.phone, href: "tel:" + D.phone.replace(/[^\d+]/g, "") });
+  if (D.linkedin) rows.push({ label: "LinkedIn", value: "in/" + D.linkedin.replace(/\/$/, "").split("/").pop(), href: D.linkedin, ext: true });
+  if (D.github) rows.push({ label: "GitHub", value: D.github.replace(/^https?:\/\/(www\.)?/, ""), href: D.github, ext: true });
+  if (D.location) rows.push({ label: "Location", value: D.location, time: true });
+  const miniHead = `<svg viewBox="136 20 128 150" aria-hidden="true"><path d="M200 28 C232 28 252 50 254 82 L256 112 C256 132 246 148 230 156 L214 162 L186 162 L170 156 C154 148 144 132 144 112 L146 82 C148 50 168 28 200 28 Z" fill="#1b2240" stroke="rgba(150,190,255,.55)" stroke-width="3"/><path d="M154 86 L246 86 L241 110 C232 119 168 119 159 110 Z" fill="#02040a" stroke="rgba(150,190,255,.55)" stroke-width="2.5"/><rect x="184" y="97" width="32" height="6" rx="3" fill="#45e3d4"/><path d="M182 124 L218 124 L213 148 L187 148 Z" fill="#1b2240" stroke="rgba(150,190,255,.5)" stroke-width="2.5"/></svg>`;
+  const contactHTML = `
+  <section class="sec" id="contact">
+    <div class="wrap">
+      ${head(5, "contact", "Open a channel", "Ask the robot a question, or skip it and reach me directly.")}
+      <div class="contact">
+        <div class="card chat reveal" id="chat">
+          <div class="chat-top">${miniHead}<div><b>${esc(D.model.toLowerCase())}.bot</b><small>scripted answers · no model behind me</small></div><span class="live">online</span></div>
+          <div class="msgs" id="msgs" aria-live="polite"></div>
+          <div class="suggest" id="suggest">${(D.chat || []).map((c, k) => `<button type="button" data-k="${k}">${esc(c.q)}</button>`).join("")}</div>
+          <p class="chat-note">These replies are pre-written by ${esc(nameParts[0])}. For a real answer, email works best.</p>
+        </div>
+        <div class="links">
+          ${rows.map((r, k) => {
+            const inner = `<span><small>${esc(r.label)}</small><strong>${esc(r.value)}</strong></span>` + (r.time ? `<span class="time">${esc(D.tzLabel || "")} · <span id="clock">--:--</span></span>` : `<span class="go" aria-hidden="true">→</span>`);
+            return r.href ? `<a class="card row reveal" style="--i:${k}" href="${esc(r.href)}"${r.ext ? ' target="_blank" rel="noopener"' : ""}>${inner}</a>` : `<div class="card row reveal" style="--i:${k}">${inner}</div>`;
+          }).join("")}
+          <a class="btn btn-primary reveal" style="--i:${rows.length};justify-content:center" href="mailto:${esc(D.email)}">Send me an email →</a>
+        </div>
+      </div>
+    </div>
+  </section>`;
+
+  $("#main").innerHTML = heroHTML + anatomyHTML + logHTML + modsHTML + benchHTML + contactHTML;
+  $("#brand").innerHTML = `<span class="mark" aria-hidden="true"></span><span>${esc(nameParts[0].toLowerCase())}${nameParts.length > 1 ? `<span class="dim">.${esc(nameParts[nameParts.length - 1].toLowerCase())}</span>` : ""}</span>`;
+  $("#nav ul").innerHTML = NAV.map((n, k) => `<li><a href="#${n.id}" data-nav="${n.id}"><span class="i">${pad(k + 1)}</span>${n.label}</a></li>`).join("");
+  $("#copy").textContent = `© ${new Date().getFullYear()} ${D.name} · ${D.model}`;
+  $("#foot-note").textContent = D.footerNote || "";
+
+  /* ---------- boot sequence ---------- */
+  const startShow = () => document.body.classList.add("go");
+  (function boot() {
+    let seen = false;
+    try { seen = sessionStorage.getItem("booted") === "1"; } catch (_) {}
+    if (reduce || seen) { startShow(); return; }
+    const el = document.createElement("div");
+    el.id = "boot";
+    el.innerHTML = `<pre id="boot-log"></pre><span class="skip-hint">click or press any key to skip</span>`;
+    document.body.appendChild(el);
+    const lines = [
+      `<b>&gt;</b> booting ${esc(D.model)} …`,
+      `<b>&gt;</b> loading weights: cortex · optics · voice · memory  <b>ok</b>`,
+      `<b>&gt;</b> calibrating sensors (hit@k, mrr)  <b>ok</b>`,
+      `<b>&gt;</b> languages: ar, en  <b>ok</b>`,
+      `<b>&gt;</b> all systems nominal. hello, I'm ${esc(nameParts[0])}.`
+    ];
+    const log = $("#boot-log", el);
+    let i = 0, finished = false;
+    const finish = () => {
+      if (finished) return; finished = true;
+      try { sessionStorage.setItem("booted", "1"); } catch (_) {}
+      el.classList.add("done"); startShow();
+      setTimeout(() => el.remove(), 800);
+      removeEventListener("keydown", finish);
+    };
+    const tick = () => {
+      if (finished) return;
+      if (i < lines.length) { log.innerHTML += (i ? "\n" : "") + lines[i++]; if (i === lines.length) log.innerHTML += '<span class="bar"></span>'; setTimeout(tick, 230); }
+      else setTimeout(finish, 1100);
+    };
+    el.addEventListener("click", finish);
+    addEventListener("keydown", finish);
+    tick();
+  })();
+
+  /* ---------- typewriter (streams like an LLM) ---------- */
+  (function typewriter() {
+    const el = $("#typed"), lines = D.taglines || [];
+    if (!el || !lines.length) return;
+    if (reduce) { el.textContent = lines[0]; return; }
+    let li = 0, ci = 0, del = false;
+    const step = () => {
+      const full = lines[li];
+      if (!del) {
+        ci = Math.min(full.length, ci + 1 + Math.floor(Math.random() * 4));
+        el.textContent = full.slice(0, ci);
+        if (ci >= full.length) { del = true; return setTimeout(step, 2600); }
+        return setTimeout(step, 70 + Math.random() * 90);
+      }
+      ci = Math.max(0, ci - 2); el.textContent = full.slice(0, ci);
+      if (ci <= 0) { del = false; li = (li + 1) % lines.length; return setTimeout(step, 400); }
+      setTimeout(step, 22);
+    };
+    setTimeout(step, 1400);
+  })();
+
+  /* ---------- reveal + count-up ---------- */
+  const countUp = el => {
+    if (el._done) return; el._done = true;
+    const to = parseFloat(el.dataset.to), dec = +el.dataset.dec || 0, t0 = performance.now(), dur = 1700;
+    const step = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 4); el.textContent = (to * e).toFixed(dec); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  const GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#%&*+=<>/";
+  const scramble = (el, frames) => {
+    if (!el || reduce) return;
+    const final = el.dataset.text || (el.dataset.text = el.textContent);
+    el.setAttribute("aria-label", final);
+    cancelAnimationFrame(el._raf);
+    const total = frames || Math.max(24, final.length * 2); let f = 0;
+    const step = () => {
+      f++; const r = (f / total) * final.length * 1.15; let out = "";
+      for (let i = 0; i < final.length; i++) out += final[i] === " " || i < r ? final[i] : GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      el.textContent = out;
+      if (f < total) el._raf = requestAnimationFrame(step); else el.textContent = final;
+    };
+    step();
+  };
+  const onReveal = el => {
+    $$(".count", el).forEach(c => reduce ? null : countUp(c));
+    if (el.classList.contains("sec-head")) scramble($(".scr", el));
+  };
+  const io = !reduce && "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); onReveal(en.target); }
+  }), { rootMargin: "0px 0px -8% 0px", threshold: .12 }) : null;
+  $$(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+  if (reduce) $$(".count").forEach(c => c.textContent = fmt(c.dataset.to, +c.dataset.dec));
+
+  /* ---------- anatomy: active part ---------- */
+  const setActive = part => {
+    const info = partInfo[part]; if (!info) return;
+    $$("#bot-anat .part, #bot-anat .lbl").forEach(g => g.classList.toggle("active", g.dataset.part === part));
+    $$(".chapter").forEach(c => c.classList.toggle("active", c.dataset.part === part));
+    $("#ro-n").textContent = `${pad(info.n)}/${pad(A.length)}`;
+    const nm = $("#ro-name"); nm.textContent = info.name.toUpperCase(); nm.dataset.text = info.name.toUpperCase(); scramble(nm, 14);
+  };
+  if (A.length) setActive(A[0].part);
+  if ("IntersectionObserver" in window) {
+    const cio = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) setActive(en.target.dataset.part); }), { rootMargin: "-48% 0px -48% 0px" });
+    $$(".chapter").forEach(c => cio.observe(c));
+  }
+  const goPart = part => {
+    const ch = $(`#ch-${part}`); if (!ch) return;
+    ch.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    setActive(part);
+  };
+  document.addEventListener("click", e => {
+    const g = e.target.closest && e.target.closest(".robot .part, .robot .lbl");
+    if (g) goPart(g.dataset.part);
+  });
+  document.addEventListener("keydown", e => {
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".robot .part")) { e.preventDefault(); goPart(e.target.dataset.part); }
+  });
+
+  /* ---------- tooltip on robot parts ---------- */
+  const tip = $("#tip");
+  if (fine) {
+    document.addEventListener("pointerover", e => {
+      const g = e.target.closest && e.target.closest(".robot .part");
+      if (!g) { tip.classList.remove("on"); return; }
+      const info = partInfo[g.dataset.part];
+      tip.innerHTML = `<b>${pad(info.n)} · ${esc(info.name)}</b>${esc(info.short)} — click to inspect`;
+      tip.classList.add("on");
+    });
+  }
+
+  /* ---------- robots: eyes follow cursor, head tilt, blink ---------- */
+  const bots = $$(".robot").map(svg => ({ svg, head: $(".head-track", svg), pupils: $(".pupils", svg), hx: 0, hy: 0, rot: 0, ex: 0, ey: 0 }));
+  let mx = innerWidth * .7, my = innerHeight * .4, hasPointer = false, idleT = 0;
+  const toSvg = (svg, x, y) => {
+    const m = svg.getScreenCTM(); if (!m) return null;
+    const pt = new DOMPoint(x, y).matrixTransform(m.inverse());
+    return pt;
+  };
+  setInterval(() => {
+    if (reduce) return;
+    $$(".robot .eyes").forEach(e => { e.classList.add("blink"); setTimeout(() => e.classList.remove("blink"), 130); });
+  }, 4200);
+
+  /* ---------- pointer effects ---------- */
+  const spot = $("#spot");
+  let sx = mx, sy = my, tiltEl = null;
+  document.addEventListener("pointermove", e => {
+    mx = e.clientX; my = e.clientY; hasPointer = true;
+    if (!fine || reduce) return;
+    spot.classList.add("on");
+    tip.style.transform = `translate(${mx + 16}px, ${my + 18}px)`;
+    const card = e.target.closest ? e.target.closest(".card") : null;
+    if (card) { const r = card.getBoundingClientRect(); card.style.setProperty("--mx", `${mx - r.left}px`); card.style.setProperty("--my", `${my - r.top}px`); }
+    const t = e.target.closest ? e.target.closest(".tilt") : null;
+    if (t !== tiltEl) { if (tiltEl) tiltEl.style.transform = ""; tiltEl = t; }
+    if (t) {
+      const r = t.getBoundingClientRect(), dx = (mx - r.left) / r.width - .5, dy = (my - r.top) / r.height - .5;
+      const max = t.classList.contains("mod") ? 2.2 : 7;
+      t.style.transform = `perspective(900px) rotateX(${(-dy * max).toFixed(2)}deg) rotateY(${(dx * max).toFixed(2)}deg) translateY(-3px)`;
+    }
+  }, { passive: true });
+  document.addEventListener("pointerleave", () => { spot.classList.remove("on"); tip.classList.remove("on"); if (tiltEl) { tiltEl.style.transform = ""; tiltEl = null; } });
+
+  (function frame(now) {
+    if (fine && !reduce) {
+      sx += (mx - sx) * .08; sy += (my - sy) * .08;
+      spot.style.transform = `translate3d(${sx.toFixed(1)}px, ${sy.toFixed(1)}px, 0)`;
+    }
+    if (!reduce) {
+      // touch devices: let the eyes wander
+      if (!hasPointer && now - idleT > 2200) { idleT = now; mx = innerWidth * (.2 + Math.random() * .6); my = innerHeight * (.2 + Math.random() * .6); }
+      for (const b of bots) {
+        const r = b.svg.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > innerHeight) continue;
+        const pt = toSvg(b.svg, mx, my); if (!pt) continue;
+        const dx = pt.x - 200, dy = pt.y - 100;
+        const tx = Math.max(-26, Math.min(26, dx / 12)), ty = Math.max(-3, Math.min(5, dy / 40));
+        const trot = b.svg.classList.contains("anat-svg") ? 0 : Math.max(-5, Math.min(5, dx / 55));
+        b.ex += (tx - b.ex) * .15; b.ey += (ty - b.ey) * .15; b.rot += (trot - b.rot) * .08;
+        b.pupils.setAttribute("transform", `translate(${b.ex.toFixed(2)} ${b.ey.toFixed(2)})`);
+        b.head.setAttribute("transform", `rotate(${b.rot.toFixed(2)} 200 165)`);
+      }
+    }
+    requestAnimationFrame(frame);
+  })(0);
+
+  /* ---------- scripted chat ---------- */
+  (function chat() {
+    const msgs = $("#msgs"), sug = $("#suggest"); if (!msgs) return;
+    const heroBot = $("#bot-hero");
+    const add = (cls, text) => { const m = document.createElement("div"); m.className = `msg ${cls}`; m.textContent = text; msgs.appendChild(m); msgs.scrollTop = msgs.scrollHeight; return m; };
+    const stream = (text, done) => {
+      const m = add("bot", ""); let i = 0;
+      if (reduce) { m.textContent = text; return done(); }
+      $$(".robot").forEach(r => r.classList.add("talking"));
+      const step = () => {
+        i = Math.min(text.length, i + 1 + Math.floor(Math.random() * 4));
+        m.textContent = text.slice(0, i); msgs.scrollTop = msgs.scrollHeight;
+        if (i < text.length) setTimeout(step, 28 + Math.random() * 40);
+        else { $$(".robot").forEach(r => r.classList.remove("talking")); done(); }
+      };
+      step();
+    };
+    add("bot", `Hi, I'm ${D.model.toLowerCase()}.bot. I answer with ${nameParts[0]}'s own notes. Pick a question below.`);
+    let busy = false;
+    sug.addEventListener("click", e => {
+      const b = e.target.closest("button"); if (!b || busy) return;
+      const item = D.chat[+b.dataset.k]; busy = true; b.disabled = true;
+      $$("button", sug).forEach(x => x.style.pointerEvents = "none");
+      add("me", item.q);
+      const t = add("bot typing", ""); t.innerHTML = "<i></i><i></i><i></i>";
+      setTimeout(() => { t.remove(); stream(item.a, () => { busy = false; $$("button", sug).forEach(x => x.style.pointerEvents = ""); }); }, reduce ? 0 : 650);
+    });
+  })();
+
+  /* ---------- nav: scroll spy, menu, progress, clock ---------- */
+  const nav = $("#nav"), menuBtn = $("#menu-btn");
+  const closeMenu = () => { nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); };
+  menuBtn.addEventListener("click", () => { const o = !nav.classList.contains("open"); nav.classList.toggle("open", o); menuBtn.setAttribute("aria-expanded", String(o)); });
+  nav.addEventListener("click", e => { if (e.target.closest("a")) closeMenu(); });
+  document.addEventListener("click", e => { if (!e.target.closest(".top")) closeMenu(); });
+  if ("IntersectionObserver" in window) {
+    const sio = new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting) $$("[data-nav]").forEach(a => a.dataset.nav === en.target.id ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current"));
+    }), { rootMargin: "-40% 0px -55% 0px" });
+    $$("main > section").forEach(s => sio.observe(s));
+  }
+  const sp = $("#scroll-prog");
+  const onScroll = () => { const max = document.documentElement.scrollHeight - innerHeight; sp.style.setProperty("--sp", max > 0 ? (scrollY / max).toFixed(4) : 0); };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  const tick = () => {
+    const el = $("#clock"); if (!el) return;
+    try { el.textContent = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: D.timezone }).format(new Date()); } catch (_) { el.textContent = ""; }
+  };
+  tick(); setInterval(tick, 20000);
+})();
+</script>
+</body>
+</html>
